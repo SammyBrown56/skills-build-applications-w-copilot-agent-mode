@@ -28,6 +28,8 @@ DEBUG = True
 # Allow all hosts
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'upgraded-cod-r4wwpj9jj7qqfpx77.github.dev']
 
+# Add codespace Django REST API endpoint suffix
+CODESPACE_API_SUFFIX = '-8000.app.github.dev'
 
 # Application definition
 
