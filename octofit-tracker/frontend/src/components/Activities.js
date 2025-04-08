@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+const API_BASE_URL = 'https://upgraded-cod-r4wwpj9jj7qqfpx77.github.dev/8000.app.github.dev';
+
 function Activities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('https://upgraded-cod-r4wwpj9jj7qqfpx77.github.dev/8000.app.github.dev/api/activities/')
+    fetch(`${API_BASE_URL}/api/activities/`)
       .then(response => response.json())
       .then(data => setActivities(data))
       .catch(error => console.error('Error fetching activities:', error));

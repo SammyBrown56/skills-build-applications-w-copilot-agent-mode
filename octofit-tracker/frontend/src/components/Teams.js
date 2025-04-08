@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
+const API_BASE_URL = 'https://upgraded-cod-r4wwpj9jj7qqfpx77.github.dev/8000.app.github.dev';
+
 function Teams() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('https://upgraded-cod-r4wwpj9jj7qqfpx77.github.dev/8000.app.github.dev/api/teams/')
+    fetch(`${API_BASE_URL}/api/teams/`)
       .then(response => response.json())
       .then(data => setTeams(data))
       .catch(error => console.error('Error fetching teams:', error));
